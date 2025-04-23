@@ -1,0 +1,29 @@
+sass:
+  style: compressed
+  load_paths:
+    - _sass
+  syntax: :scss
+  future:
+    dart_sass: false  # 暂时禁用新特性警告
+
+collections:
+  authors:
+    output: true  # 允许为每个作者生成独立页面[9](@ref)
+
+
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
