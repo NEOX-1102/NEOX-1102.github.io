@@ -1,2 +1,3 @@
 # frozen_string_literal: true
-gem "github-pages", group: :jekyll_pluginsh"  
+gem "jekyll"
+source "https://rubygems.org"
