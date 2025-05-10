@@ -1,0 +1,45 @@
+- tracking_number: YD20240601001
+  status: 未发货
+  client_code: C001
+  transport_mode: 公路
+  destination: 北京
+  items_count: 10
+  total_weight: 120
+  created_at: 2024-06-01 09:30
+  shipped_date: 
+- tracking_number: YD20240601002
+  status: 运输中
+  client_code: C002
+  transport_mode: 铁路
+  destination: 上海
+  items_count: 5
+  total_weight: 60
+  created_at: 2024-06-01 10:00
+  shipped_date: 2024-06-01
+- tracking_number: YD20240601003
+  status: 已到达
+  client_code: C003
+  transport_mode: 空运
+  destination: 广州
+  items_count: 2
+  total_weight: 15
+  created_at: 2024-05-31 15:20
+  shipped_date: 2024-05-31
+- tracking_number: YD20240601004
+  status: 未发货
+  client_code: C002
+  transport_mode: 公路
+  destination: 深圳
+  items_count: 8
+  total_weight: 90
+  created_at: 2024-06-02 08:10
+  shipped_date: 
+- tracking_number: YD20240601005
+  status: 运输中
+  client_code: C001
+  transport_mode: 铁路
+  destination: 杭州
+  items_count: 12
+  total_weight: 150
+  created_at: 2024-06-02 11:45
+  shipped_date: 2024-06-02 

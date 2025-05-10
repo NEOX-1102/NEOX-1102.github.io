@@ -1,0 +1,90 @@
+body {
+    background: #f9fafb;
+    font-family: 'Helvetica Neue', 'PingFang SC', '微软雅黑', Arial, sans-serif;
+    color: #222;
+    margin: 0;
+}
+.header {
+    max-width: 900px;
+    margin: 60px auto 32px auto;
+    text-align: center;
+}
+.header h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 0.2em;
+}
+.header .desc {
+    color: #888;
+    font-size: 1.1em;
+    margin-bottom: 1.5em;
+}
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 2.5em;
+    margin-bottom: 2.5em;
+}
+.stat {
+    min-width: 90px;
+}
+.stat .num {
+    font-size: 2em;
+    font-weight: 600;
+    color: #2d8cf0;
+    margin-bottom: 0.1em;
+}
+.stat .label {
+    color: #888;
+    font-size: 1em;
+}
+.table-container {
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    padding: 0 0 24px 0;
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.05em;
+    background: #fff;
+    margin: 0;
+}
+thead {
+    background: #f5f7fa;
+}
+th, td {
+    padding: 16px 12px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+}
+th {
+    font-weight: 600;
+    color: #2d8cf0;
+    letter-spacing: 1px;
+    font-size: 1.08em;
+}
+tr:last-child td {
+    border-bottom: none;
+}
+.status-badge {
+    padding: 2px 12px;
+    border-radius: 12px;
+    font-size: 0.98em;
+    font-weight: 500;
+    background: #f2f4f8;
+    color: #2d8cf0;
+    display: inline-block;
+}
+.status-badge[data-status="未发货"] { color: #e6a23c; background: #fff7e6; }
+.status-badge[data-status="运输中"] { color: #2d8cf0; background: #e6f0fa; }
+.status-badge[data-status="已到达"] { color: #67c23a; background: #f0fae6; }
+@media (max-width: 700px) {
+    .header, .table-container { max-width: 98vw; }
+    th, td { padding: 10px 4px; font-size: 0.98em; }
+}
