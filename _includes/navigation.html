@@ -1,7 +1,17 @@
-<nav>
-  {% for item in site.data.navigation %}
-    <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
-      {{ item.name }}
-    </a>
-  {% endfor %}
+<nav class="navbar">
+  <div class="navbar-logo">
+    <a href="/" class="logo-text dunhuang-font">敦煌</a>
+  </div>
+  <div class="navbar-links">
+    {% for item in site.data.navigation offset:1 %}
+      {% if item.name == '搜索' %}
+        <form action="/search.html" method="get" class="search-form">
+          <input type="text" name="q" placeholder="搜索..." class="search-input">
+          <button type="submit" class="search-btn">🔍</button>
+        </form>
+      {% else %}
+        <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}><span class="nav-icon">{{ item.icon }}</span> {{ item.name }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
 </nav>
