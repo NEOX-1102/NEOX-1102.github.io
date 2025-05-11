@@ -1,31 +1,49 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demo</title>
     <link rel="stylesheet" href="/assets/css/styles.css"> 
   </head>
   <body>
-    <nav>
-  
-    <a href="/" >
-      Home
-    </a>
-  
-    <a href="/about.html" >
-      About
-    </a>
-  
-    <a href="/blog.html" >
-      Blog
-    </a>
-  
-    <a href="/staff.html" >
-      Staff
-    </a>
-  
+    <nav class="navbar">
+  <div class="navbar-logo">
+    <a href="/" class="logo-text dunhuang-font">敦煌</a>
+  </div>
+  <div class="navbar-links">
+    
+      
+        <a href="/product.html" ><span class="nav-icon">📦</span> 商品详情页</a>
+      
+    
+      
+        <a href="/orders.html" ><span class="nav-icon">📋</span> 我的订单</a>
+      
+    
+      
+        <a href="/categories.html" ><span class="nav-icon">📑</span> 分类</a>
+      
+    
+      
+        <a href="/announcements.html" ><span class="nav-icon">📢</span> 公司公告</a>
+      
+    
+      
+        <form action="/search.html" method="get" class="search-form">
+          <input type="text" name="q" placeholder="搜索..." class="search-input">
+          <button type="submit" class="search-btn">🔍</button>
+        </form>
+      
+    
+      
+        <a href="/" ><span class="nav-icon">🏠</span> 首页</a>
+      
+    
+  </div>
 </nav>
-    <h1>Demo</h1>
+    <div class="container">
+      <h1>Demo</h1>
 <p>20 Apr 2025 - wgw</p>
 <h2 id="内容部分">内容部分</h2>
 <p>A banana is an edible fruit…</p>
@@ -37,5 +55,6 @@
       - <a href="/authors/wgw.html">wgw</a>
     
   </p>
+    </div>
   </body>
 </html>

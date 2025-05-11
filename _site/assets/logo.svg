@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d8cf0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a5fb4;stop-opacity:1" />
+    </linearGradient>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap');
+      .dunhuang-text {
+        font-family: 'Ma Shan Zheng', cursive;
+      }
+    </style>
+  </defs>
+  <circle cx="75" cy="75" r="70" fill="url(#grad)" />
+  <text x="75" y="90" class="dunhuang-text" font-size="60" fill="white" text-anchor="middle">敦煌</text>
+  <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
+  <!-- 装饰元素：敦煌壁画风格的线条 -->
+  <path d="M30,75 Q75,30 120,75" stroke="white" stroke-width="2" fill="none" />
+  <path d="M30,75 Q75,120 120,75" stroke="white" stroke-width="2" fill="none" />
+</svg> 
