@@ -1,12 +1,75 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/css/styles.css"> 
-  </head>
-  <body>
-    {% include navigation.html %}
-    {{ content }}
-  </body>
+<!DOCTYPE html>
+<html lang="{% if page.lang == 'en' %}en{% else %}zh{% endif %}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{% if page.lang == 'en' %}Buy Globally, Sell Globally, Empowering SMEs{% else %}{{ site.description }}{% endif %}">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-content">
+        <h1 class="site-title">
+          <a href="{% if page.lang == 'en' %}/en/{% else %}/{% endif %}">{{ site.title }}</a>
+        </h1>
+        <nav class="main-nav">
+          <div class="language-switch">
+            <a href="/" {% if page.lang != 'en' %}class="active"{% endif %}>中文</a>
+            <span class="separator">|</span>
+            <a href="/en/" {% if page.lang == 'en' %}class="active"{% endif %}>English</a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="{% if page.lang == 'en' %}/en/{% else %}/{% endif %}">{% if page.lang == 'en' %}Home{% else %}首页{% endif %}</a></li>
+            <li><a href="{% if page.lang == 'en' %}/en/categories/{% else %}/categories/{% endif %}">{% if page.lang == 'en' %}Categories{% else %}分类{% endif %}</a></li>
+            <li><a href="{% if page.lang == 'en' %}/en/about/{% else %}/about/{% endif %}">{% if page.lang == 'en' %}About{% else %}关于我们{% endif %}</a></li>
+            <li><a href="{% if page.lang == 'en' %}/en/contact/{% else %}/contact/{% endif %}">{% if page.lang == 'en' %}Contact{% else %}联系我们{% endif %}</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-content">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>{% if page.lang == 'en' %}About {{ site.title }}{% else %}关于{{ site.title }}{% endif %}</h3>
+          <p>{% if page.lang == 'en' %}Buy Globally, Sell Globally, Empowering SMEs{% else %}{{ site.description }}{% endif %}</p>
+        </div>
+        <div class="footer-section">
+          <h3>{% if page.lang == 'en' %}Quick Links{% else %}快速链接{% endif %}</h3>
+          <ul>
+            <li><a href="{% if page.lang == 'en' %}/en/{% else %}/{% endif %}">{% if page.lang == 'en' %}Home{% else %}首页{% endif %}</a></li>
+            <li><a href="{% if page.lang == 'en' %}/en/categories/{% else %}/categories/{% endif %}">{% if page.lang == 'en' %}Categories{% else %}分类{% endif %}</a></li>
+            <li><a href="{% if page.lang == 'en' %}/en/about/{% else %}/about/{% endif %}">{% if page.lang == 'en' %}About{% else %}关于我们{% endif %}</a></li>
+            <li><a href="{% if page.lang == 'en' %}/en/contact/{% else %}/contact/{% endif %}">{% if page.lang == 'en' %}Contact{% else %}联系我们{% endif %}</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>{% if page.lang == 'en' %}Follow Us{% else %}关注我们{% endif %}</h3>
+          <div class="social-links">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. {% if page.lang == 'en' %}All rights reserved.{% else %}保留所有权利。{% endif %}</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
 </html>
