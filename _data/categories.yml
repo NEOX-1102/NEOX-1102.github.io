@@ -1,0 +1,61 @@
+- slug: electronics
+  name: 电子产品
+  name_en: Electronics
+  description: 各类电子产品，手机、电脑、配件等
+- slug: fashion
+  name: 时尚服饰
+  name_en: Fashion
+  description: 流行服装、鞋帽、配饰等
+- slug: home
+  name: 家居用品
+  name_en: Home & Living
+  description: 家具、家纺、装饰等
+- slug: beauty
+  name: 美容与个护
+  name_en: Beauty & Personal Care
+  description: 美妆、护肤、个人护理等
+- slug: baby
+  name: 母婴用品
+  name_en: Baby Products
+  description: 婴儿用品、孕妇用品等
+- slug: sports
+  name: 运动与户外
+  name_en: Sports & Outdoors
+  description: 运动器材、户外用品等
+- slug: auto
+  name: 汽车配件
+  name_en: Auto Parts
+  description: 汽车零部件、汽车用品等
+- slug: toys
+  name: 玩具与礼品
+  name_en: Toys & Gifts
+  description: 各类玩具、礼品、工艺品等
+- slug: office
+  name: 办公与文具
+  name_en: Office & Stationery
+  description: 办公用品、文具、设备等
+- slug: food
+  name: 食品与饮料
+  name_en: Food & Beverage
+  description: 各类食品、饮料、休闲零食等
+- slug: lighting
+  name: 灯具与照明
+  name_en: Lighting
+  description: 灯具、照明设备等
+- slug: building
+  name: 建筑与五金
+  name_en: Building & Hardware
+  description: 建筑材料、五金工具等
+- slug: health
+  name: 健康与医疗
+  name_en: Health & Medical
+  description: 医疗器械、健康产品等
+- slug: packaging
+  name: 包装与印刷
+  name_en: Packaging & Printing
+  description: 包装材料、印刷制品等
+- slug: machinery
+  name: 机械设备
+  name_en: Machinery
+  description: 各类机械、设备、工业用品等
+   

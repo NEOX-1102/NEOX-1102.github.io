@@ -1,1 +1,0 @@
-{"version":3,"sourceRoot":"","sources":["../../_sass/main.scss"],"names":[],"mappings":"AAAA,SACI","sourcesContent":[".current {\n    color: green;  // 将当前链接设为绿色\n  }"],"file":"styles.css"}

@@ -1,29 +1,35 @@
-sass:
-  style: compressed
-  load_paths:
-    - _sass
-  syntax: :scss
-  future:
-    dart_sass: false  # 暂时禁用新特性警告
+title: 敦煌网
+description: 买全球，卖全球，赋能中小微企业
 
+# Build settings
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
 collections:
-  authors:
-    output: true  # 允许为每个作者生成独立页面[9](@ref)
+  products:
+    output: true
+    permalink: /products/:path/
 
-
-
+# Defaults
 defaults:
   - scope:
       path: ""
-      type: "authors"
+      type: "products"
     values:
-      layout: "author"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-  - scope:
-      path: ""
-    values:
-      layout: "default"
+      layout: "product"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - .github
+  - .vscode
+  - .idea
+  - .devcontainer

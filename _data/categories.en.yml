@@ -1,0 +1,45 @@
+- name: Electronics
+  slug: electronics
+  description: All kinds of electronics, phones, computers, accessories, etc.
+- name: Fashion
+  slug: fashion
+  description: Trendy clothing, shoes, hats, accessories, etc.
+- name: Home & Living
+  slug: home
+  description: Furniture, home textiles, decorations, etc.
+- name: Beauty & Personal Care
+  slug: beauty
+  description: Cosmetics, skincare, personal care, etc.
+- name: Baby Products
+  slug: baby
+  description: Baby products, maternity products, etc.
+- name: Sports & Outdoors
+  slug: sports
+  description: Sports equipment, outdoor products, etc.
+- name: Auto Parts
+  slug: auto
+  description: Auto parts, car accessories, etc.
+- name: Toys & Gifts
+  slug: toys
+  description: All kinds of toys, gifts, crafts, etc.
+- name: Office & Stationery
+  slug: office
+  description: Office supplies, stationery, equipment, etc.
+- name: Food & Beverage
+  slug: food
+  description: All kinds of food, beverages, snacks, etc.
+- name: Lighting
+  slug: lighting
+  description: Lighting fixtures, lighting equipment, etc.
+- name: Building & Hardware
+  slug: building
+  description: Building materials, hardware tools, etc.
+- name: Health & Medical
+  slug: health
+  description: Medical devices, health products, etc.
+- name: Packaging & Printing
+  slug: packaging
+  description: Packaging materials, printed products, etc.
+- name: Machinery
+  slug: machinery
+  description: All kinds of machinery, equipment, industrial products, etc. 

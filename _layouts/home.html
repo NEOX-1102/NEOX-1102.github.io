@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<div class="banner">
+  <h2>{{ site.title }}</h2>
+  <p>{% if page.lang == 'en' %}Empowering SMEs for cross-border e-commerce{% else %}全链路赋能跨境电商中小微企业{% endif %}</p>
+</div>
+
+<div class="category-index">
+  {% for cat in site.data.categories %}
+    <a class="category-tag" href="{% if page.lang == 'en' %}/en/category/{{ cat.slug }}/{% else %}/category/{{ cat.slug }}/{% endif %}">
+      {% if page.lang == 'en' %}{{ cat.name_en }}{% else %}{{ cat.name }}{% endif %}
+    </a>
+  {% endfor %}
+</div>

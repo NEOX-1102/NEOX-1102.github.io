@@ -1,0 +1,24 @@
+<header>
+  <h1><a href="/">{% if page.lang == 'en' %}DHgate{% else %}敦煌网{% endif %}</a></h1>
+  <nav>
+    <a href="/" {% unless page.lang == 'en' %}style="font-weight:bold;"{% endunless %}>中文</a> |
+    <a href="/en/" {% if page.lang == 'en' %}style="font-weight:bold;"{% endif %}>English</a>
+    {% if page.lang == 'en' %}
+      <a href="/en/">Home</a>
+      <a href="/en/category/electronics/">Electronics</a>
+      <a href="/en/category/fashion/">Fashion</a>
+      <a href="/en/category/home/">Home & Living</a>
+      <a href="/en/category/beauty/">Beauty & Personal Care</a>
+      <a href="/en/category/baby/">Baby Products</a>
+      <!-- 可继续添加其它英文分类 -->
+    {% else %}
+      <a href="/">首页</a>
+      <a href="/category/electronics/">电子产品</a>
+      <a href="/category/fashion/">时尚服饰</a>
+      <a href="/category/home/">家居用品</a>
+      <a href="/category/beauty/">美容与个人护理</a>
+      <a href="/category/baby/">母婴用品</a>
+      <!-- 可继续添加其它中文分类 -->
+    {% endif %}
+  </nav>
+</header>

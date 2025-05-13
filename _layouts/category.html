@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+{% assign cat_slug = page.slug | default: page.permalink | split: '/' | last | downcase %}
+{% assign cat = site.data.categories | where: "slug", cat_slug | first %}
+
+<div class="category-banner">
+  <h1>{% if page.lang == 'en' %}{{ cat.name_en }}{% else %}{{ cat.name }}{% endif %}</h1>
+  <p>{% if page.lang == 'en' %}{{ cat.description_en | default: cat.description }}{% else %}{{ cat.description }}{% endif %}</p>
+</div>
+
+<div class="category-products">
+  <h2>{% if page.lang == 'en' %}Products in this Category{% else %}本分类商品{% endif %}</h2>
+  <div class="product-grid">
+    {% if page.lang == 'en' %}
+      {% assign products = site.data.products_en[cat_slug] %}
+    {% else %}
+      {% assign products = site.data.products[cat_slug] %}
+    {% endif %}
+    {% if products and products.size > 0 %}
+      {% for product in products %}
+        <div class="product-card">
+          <div class="product-info">
+            <h3 class="product-title">{{ product.name }}</h3>
+            <p class="product-description">{{ product.description | default: product.desc }}</p>
+            <div class="product-price">{{ product.price }}</div>
+            <div class="product-link">
+              <a class="jd-link-btn" href="{{ product.image | default: product.img }}" target="_blank">
+                {% if page.lang == 'en' %}
+                  View on JD.com
+                {% else %}
+                  去京东查看
+                {% endif %}
+              </a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p style="padding:2rem;text-align:center;">{% if page.lang == 'en' %}No products{% else %}暂无商品{% endif %}</p>
+    {% endif %}
+  </div>
+</div>
+
+<!-- 示例图片和静态内容将在后续添加 -->
+
+<!-- 这里可以展示该分类下的商品列表，后续可扩展 --> 
