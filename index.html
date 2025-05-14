@@ -1,5 +1,61 @@
 ---
 layout: default
-title: Home
+title: 运单管理系统
 ---
-<h1>{{ "Hello World!" | downcase }}</h1>
+
+<link rel="stylesheet" href="assets/css/index_style.css">
+
+<div class="header">
+    <h1>运单管理系统</h1>
+    <div class="desc">表格风格 · 高效 · 现代物流运单管理</div>
+    <div class="stats">
+        <div class="stat">
+            <div class="num">{{ site.data.shipments | size }}</div>
+            <div class="label">总运单</div>
+        </div>
+        <div class="stat">
+            <div class="num">{{ site.data.shipments | where: "status", "未发货" | size }}</div>
+            <div class="label">未发货</div>
+        </div>
+        <div class="stat">
+            <div class="num">{{ site.data.shipments | where: "status", "运输中" | size }}</div>
+            <div class="label">运输中</div>
+        </div>
+        <div class="stat">
+            <div class="num">{{ site.data.shipments | where: "status", "已到达" | size }}</div>
+            <div class="label">已到达</div>
+        </div>
+    </div>
+</div>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>运单号</th>
+                <th>状态</th>
+                <th>客户代码</th>
+                <th>运输方式</th>
+                <th>目的地</th>
+                <th>货物</th>
+                <th>创建时间</th>
+                <th>发货时间</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% assign sorted_shipments = site.data.shipments | sort: "created_at" | reverse %}
+            {% for shipment in sorted_shipments %}
+            <tr>
+                <td>{{ shipment.tracking_number }}</td>
+                <td><span class="status-badge" data-status="{{ shipment.status }}">{{ shipment.status }}</span></td>
+                <td>{{ shipment.client_code }}</td>
+                <td>{{ shipment.transport_mode }}</td>
+                <td>{{ shipment.destination }}</td>
+                <td>{{ shipment.items_count }}件/{{ shipment.total_weight }}kg</td>
+                <td>{{ shipment.created_at | date: "%Y-%m-%d" }}</td>
+                <td>{% if shipment.shipped_date %}{{ shipment.shipped_date | date: "%Y-%m-%d" }}{% else %}-{% endif %}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
