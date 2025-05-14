@@ -1,0 +1,108 @@
+---
+layout: default
+title: 订单管理系统
+---
+
+<link rel="stylesheet" href="assets/css/index_style.css">
+
+<div class="header">
+    <h3>订单管理系统</h3>
+    <div class="stats">
+        <div class="stat">
+            <div class="num">{{ site.data.orders | size }}</div>
+            <div class="label">总订单</div>
+        </div>
+        <div class="stat">
+            <div class="num">{{ site.data.orders | where: "status", "待付款" | size }}</div>
+            <div class="label">待付款</div>
+        </div>
+        <div class="stat">
+            <div class="num">{{ site.data.orders | where: "status", "已付款" | size }}</div>
+            <div class="label">已付款</div>
+        </div>
+        <div class="stat">
+            <div class="num">{{ site.data.orders | where: "status", "已完成" | size }}</div>
+            <div class="label">已完成</div>
+        </div>
+    </div>
+</div>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>订单号</th>
+                <th>状态</th>
+                <th>客户名称</th>
+                <th>订单金额</th>
+                <th>支付方式</th>
+                <th>商品数量</th>
+                <th>下单时间</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if site.data.orders %}
+            {% assign sorted_orders = site.data.orders | sort: "created_at" | reverse %}
+            {% for order in sorted_orders %}
+            <tr>
+                <td>{{ order.order_number }}</td>
+                <td><span class="status-badge" data-status="{{ order.status }}">{{ order.status }}</span></td>
+                <td>{{ order.customer_name }}</td>
+                <td>¥{{ order.amount }}</td>
+                <td>{{ order.payment_method }}</td>
+                <td>{{ order.items_count }}件</td>
+                <td>{{ order.created_at | date: "%Y-%m-%d %H:%M" }}</td>
+                <td>
+                    <a href="#" class="action-btn">🔍 查看</a>
+                    <a href="#" class="action-btn">✏️ 编辑</a>
+                </td>
+            </tr>
+            {% endfor %}
+            {% else %}
+            <tr>
+                <td colspan="8">暂无订单数据</td>
+            </tr>
+            {% endif %}
+        </tbody>
+    </table>
+</div>
+
+<style>
+    .action-btn {
+        display: inline-block;
+        padding: 4px 8px;
+        margin: 0 4px;
+        background-color: #f0f0f0;
+        border-radius: 4px;
+        text-decoration: none;
+        color: #333;
+        font-size: 14px;
+    }
+
+    .action-btn:hover {
+        background-color: #e0e0e0;
+    }
+
+    .status-badge[data-status="待付款"] {
+        background-color: #ffd700;
+    }
+
+    .status-badge[data-status="已付款"] {
+        background-color: #90EE90;
+    }
+
+    .status-badge[data-status="已完成"] {
+        background-color: #87CEEB;
+    }
+</style>
+
+<script>
+    // 用户菜单下拉逻辑
+    const avatar = document.getElementById('userAvatar');
+    const dropdown = document.getElementById('userDropdown');
+    avatar.addEventListener('mouseenter', () => { dropdown.style.display = 'block'; });
+    avatar.addEventListener('mouseleave', () => { setTimeout(() => { if (!dropdown.matches(':hover')) dropdown.style.display = 'none'; }, 200); });
+    dropdown.addEventListener('mouseleave', () => { dropdown.style.display = 'none'; });
+    dropdown.addEventListener('mouseenter', () => { dropdown.style.display = 'block'; });
+</script>

@@ -1,0 +1,23 @@
+- order_number: 20240001
+  status: 待付款
+  customer_name: 张三
+  amount: 120.00
+  payment_method: 微信
+  items_count: 2
+  created_at: 2024-06-01 10:00
+
+- order_number: 20240002
+  status: 已付款
+  customer_name: 李四
+  amount: 300.00
+  payment_method: 支付宝
+  items_count: 5
+  created_at: 2024-06-02 14:30
+
+- order_number: 20240003
+  status: 已完成
+  customer_name: 王五
+  amount: 450.00
+  payment_method: 银行卡
+  items_count: 3
+  created_at: 2024-06-03 09:20

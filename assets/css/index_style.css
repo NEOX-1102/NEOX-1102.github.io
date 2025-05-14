@@ -4,87 +4,301 @@ body {
     color: #222;
     margin: 0;
 }
+
 .header {
     max-width: 900px;
     margin: 60px auto 32px auto;
     text-align: center;
 }
+
 .header h1 {
     font-size: 2.8em;
     font-weight: 700;
     letter-spacing: 2px;
     margin-bottom: 0.2em;
 }
+
 .header .desc {
     color: #888;
     font-size: 1.1em;
     margin-bottom: 1.5em;
 }
+
 .stats {
     display: flex;
     justify-content: center;
     gap: 2.5em;
     margin-bottom: 2.5em;
 }
+
 .stat {
     min-width: 90px;
 }
+
 .stat .num {
     font-size: 2em;
     font-weight: 600;
     color: #2d8cf0;
     margin-bottom: 0.1em;
 }
+
 .stat .label {
     color: #888;
     font-size: 1em;
 }
+
 .table-container {
     max-width: 900px;
     margin: 0 auto 60px auto;
     background: #fff;
     border-radius: 14px;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
     padding: 0 0 24px 0;
     overflow-x: auto;
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
     font-size: 1.05em;
     background: #fff;
     margin: 0;
+    border-radius: 14px;
+    overflow: hidden;
 }
+
 thead {
     background: #f5f7fa;
 }
-th, td {
+
+th,
+td {
     padding: 16px 12px;
     text-align: left;
     border-bottom: 1px solid #f0f0f0;
 }
+
 th {
     font-weight: 600;
     color: #2d8cf0;
     letter-spacing: 1px;
     font-size: 1.08em;
 }
+
 tr:last-child td {
     border-bottom: none;
 }
-.status-badge {
-    padding: 2px 12px;
-    border-radius: 12px;
-    font-size: 0.98em;
-    font-weight: 500;
-    background: #f2f4f8;
-    color: #2d8cf0;
-    display: inline-block;
+
+/* 表格斑马纹和悬停高亮 */
+tbody tr:nth-child(odd) {
+    background: #f8fafc;
 }
-.status-badge[data-status="未发货"] { color: #e6a23c; background: #fff7e6; }
-.status-badge[data-status="运输中"] { color: #2d8cf0; background: #e6f0fa; }
-.status-badge[data-status="已到达"] { color: #67c23a; background: #f0fae6; }
+
+tbody tr:hover {
+    background: #e6f0fa;
+    transition: background 0.2s;
+}
+
+/* 表头圆角 */
+thead tr th:first-child {
+    border-top-left-radius: 12px;
+}
+
+thead tr th:last-child {
+    border-top-right-radius: 12px;
+}
+
+/* 状态标签美化 */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    height: 32px;
+    min-width: 64px;
+    padding: 0 16px;
+    border-radius: 16px;
+    font-size: 1em;
+    font-weight: 600;
+    box-shadow: 0 1px 4px rgba(45, 140, 240, 0.06);
+    border: 1px solid #e0e7ef;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.status-badge[data-status="待付款"] {
+    color: #b8860b;
+    background: linear-gradient(90deg, #fffbe6 60%, #ffe066 100%);
+    border-color: #ffe066;
+}
+
+.status-badge[data-status="已付款"] {
+    color: #228b22;
+    background: linear-gradient(90deg, #e6fae6 60%, #b7f5b7 100%);
+    border-color: #b7f5b7;
+}
+
+.status-badge[data-status="已完成"] {
+    color: #1565c0;
+    background: linear-gradient(90deg, #e6f0fa 60%, #b3e5fc 100%);
+    border-color: #b3e5fc;
+}
+
+/* 操作按钮美化 */
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 14px;
+    margin: 0 4px;
+    background: linear-gradient(90deg, #f0f4fa 60%, #e3eaf6 100%);
+    border-radius: 6px;
+    text-decoration: none;
+    color: #1976d2;
+    font-size: 15px;
+    font-weight: 500;
+    border: 1px solid #e0e7ef;
+    box-shadow: 0 1px 4px rgba(45, 140, 240, 0.04);
+    transition: background 0.2s, color 0.2s;
+    gap: 4px;
+}
+
+.action-btn:hover {
+    background: #1976d2;
+    color: #fff;
+    border-color: #1976d2;
+}
+
 @media (max-width: 700px) {
-    .header, .table-container { max-width: 98vw; }
-    th, td { padding: 10px 4px; font-size: 0.98em; }
+
+    .header,
+    .table-container {
+        max-width: 98vw;
+    }
+
+    th,
+    td {
+        padding: 10px 4px;
+        font-size: 0.98em;
+    }
+
+    .action-btn {
+        font-size: 13px;
+        padding: 4px 8px;
+    }
+
+    .user-menu {
+        right: 10px;
+        top: 10px;
+    }
+}
+
+.user-menu {
+    position: absolute;
+    top: 24px;
+    right: 40px;
+    z-index: 10;
+    font-size: 16px;
+}
+
+.user-avatar {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 20px;
+    padding: 4px 12px 4px 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: background 0.2s;
+}
+
+.user-avatar:hover {
+    background: #f5f7fa;
+}
+
+.user-avatar img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.user-name {
+    margin-right: 6px;
+    color: #2d8cf0;
+    font-weight: 500;
+}
+
+.arrow {
+    font-size: 12px;
+    color: #888;
+}
+
+.user-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 44px;
+    background: #18191c;
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18), 0 1.5px 6px rgba(0, 0, 0, 0.10);
+    min-width: 160px;
+    padding: 0 0 8px 0;
+    border: 1px solid #23242a;
+    z-index: 1000;
+    transition: box-shadow 0.2s;
+    color: #fff;
+}
+
+.dropdown-avatar-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 6px;
+}
+
+.dropdown-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+}
+
+.dropdown-username {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 4px 0 8px 0;
+    color: #fff;
+}
+
+.dropdown-divider {
+    height: 1px;
+    background: #23242a;
+    margin: 0 0 8px 0;
+}
+
+.user-dropdown a {
+    display: block;
+    padding: 10px 28px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    border: none;
+    background: none;
+    transition: background 0.18s, color 0.18s;
+    border-radius: 6px;
+    margin: 0 8px;
+}
+
+.user-dropdown a:hover {
+    background: #23242a;
+    color: #4fc3f7;
+}
+
+.user-avatar .arrow {
+    margin-left: 2px;
+    font-size: 13px;
+    color: #b0b8c9;
 }

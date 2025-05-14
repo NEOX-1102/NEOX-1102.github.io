@@ -53,9 +53,20 @@ title: 运单管理系统
                 <td>{{ shipment.destination }}</td>
                 <td>{{ shipment.items_count }}件/{{ shipment.total_weight }}kg</td>
                 <td>{{ shipment.created_at | date: "%Y-%m-%d" }}</td>
-                <td>{% if shipment.shipped_date %}{{ shipment.shipped_date | date: "%Y-%m-%d" }}{% else %}-{% endif %}</td>
+                <td>{% if shipment.shipped_date %}{{ shipment.shipped_date | date: "%Y-%m-%d" }}{% else %}-{% endif %}
+                </td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
 </div>
+
+<script>
+    // 用户菜单下拉逻辑
+    const avatar = document.getElementById('userAvatar');
+    const dropdown = document.getElementById('userDropdown');
+    avatar.addEventListener('mouseenter', () => { dropdown.style.display = 'block'; });
+    avatar.addEventListener('mouseleave', () => { setTimeout(() => { if (!dropdown.matches(':hover')) dropdown.style.display = 'none'; }, 200); });
+    dropdown.addEventListener('mouseleave', () => { dropdown.style.display = 'none'; });
+    dropdown.addEventListener('mouseenter', () => { dropdown.style.display = 'block'; });
+</script>
