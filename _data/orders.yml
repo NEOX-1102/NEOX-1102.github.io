@@ -1,23 +1,23 @@
 - order_number: 20240001
-  status: 待付款
-  customer_name: 张三
+  status: Pending Payment
+  customer_name: Zhang San
   amount: 120.00
-  payment_method: 微信
+  payment_method: WeChat Pay
   items_count: 2
   created_at: 2024-06-01 10:00
 
 - order_number: 20240002
-  status: 已付款
-  customer_name: 李四
+  status: Paid
+  customer_name: Li Si
   amount: 300.00
-  payment_method: 支付宝
+  payment_method: Alipay
   items_count: 5
   created_at: 2024-06-02 14:30
 
 - order_number: 20240003
-  status: 已完成
-  customer_name: 王五
+  status: Completed
+  customer_name: Wang Wu
   amount: 450.00
-  payment_method: 银行卡
+  payment_method: Bank Transfer
   items_count: 3
   created_at: 2024-06-03 09:20
