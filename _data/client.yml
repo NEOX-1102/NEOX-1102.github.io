@@ -1,0 +1,231 @@
+- id: 1
+  name: John Doe
+  order_number: 1001
+  status: Shipped
+  items: "Laptop, Mouse"
+  total_amount: 1200
+  created_at: "2023-10-01"
+- id: 2
+  name: Jane Smith
+  order_number: 1002
+  status: In Transit
+  items: "Keyboard, Monitor"
+  total_amount: 850
+  created_at: "2023-10-02"
+- id: 3
+  name: Alice Johnson
+  order_number: 1003
+  status: Not Shipped
+  items: "Headphones, Speaker"
+  total_amount: 300
+  created_at: "2023-10-03"
+- id: 4
+  name: Bob Brown
+  order_number: 1004
+  status: Shipped
+  items: "Tablet, Charger"
+  total_amount: 600
+  created_at: "2023-10-04"
+- id: 5
+  name: Charlie Davis
+  order_number: 1005
+  status: In Transit
+  items: "Webcam"
+  total_amount: 150
+  created_at: "2023-10-05"
+- id: 6
+  name: Diana Evans
+  order_number: 1006
+  status: Not Shipped
+  items: "Printer"
+  total_amount: 400
+  created_at: "2023-10-06"
+- id: 7
+  name: Ethan Foster
+  order_number: 1007
+  status: Shipped
+  items: "Router"
+  total_amount: 250
+  created_at: "2023-10-07"
+- id: 8
+  name: Fiona Grant
+  order_number: 1008
+  status: In Transit
+  items: "Scanner"
+  total_amount: 350
+  created_at: "2023-10-08"
+- id: 9
+  name: George Hall
+  order_number: 1009
+  status: Not Shipped
+  items: "Projector"
+  total_amount: 900
+  created_at: "2023-10-09"
+- id: 10
+  name: Hannah Ingram
+  order_number: 1010
+  status: Shipped
+  items: "External HDD"
+  total_amount: 120
+  created_at: "2023-10-10"
+- id: 11
+  name: Ian Jenkins
+  order_number: 1011
+  status: In Transit
+  items: "UPS"
+  total_amount: 300
+  created_at: "2023-10-11"
+- id: 12
+  name: Julia Kelly
+  order_number: 1012
+  status: Not Shipped
+  items: "SSD"
+  total_amount: 180
+  created_at: "2023-10-12"
+- id: 13
+  name: Kevin Lee
+  order_number: 1013
+  status: Shipped
+  items: "RAM Kit"
+  total_amount: 220
+  created_at: "2023-10-13"
+- id: 14
+  name: Laura Miller
+  order_number: 1014
+  status: In Transit
+  items: "Graphics Card"
+  total_amount: 800
+  created_at: "2023-10-14"
+- id: 15
+  name: Mike Nelson
+  order_number: 1015
+  status: Not Shipped
+  items: "CPU"
+  total_amount: 500
+  created_at: "2023-10-15"
+- id: 16
+  name: Nancy Owens
+  order_number: 1016
+  status: Shipped
+  items: "Motherboard"
+  total_amount: 450
+  created_at: "2023-10-16"
+- id: 17
+  name: Oliver Price
+  order_number: 1017
+  status: In Transit
+  items: "Cooling Fan"
+  total_amount: 90
+  created_at: "2023-10-17"
+- id: 18
+  name: Patricia Quinn
+  order_number: 1018
+  status: Not Shipped
+  items: "Power Supply"
+  total_amount: 150
+  created_at: "2023-10-18"
+- id: 19
+  name: Quincy Reed
+  order_number: 1019
+  status: Shipped
+  items: "Monitor Stand"
+  total_amount: 75
+  created_at: "2023-10-19"
+- id: 20
+  name: Rachel Simmons
+  order_number: 1020
+  status: In Transit
+  items: "Cable Set"
+  total_amount: 60
+  created_at: "2023-10-20"
+- id: 21
+  name: Steve Turner
+  order_number: 1021
+  status: Not Shipped
+  items: "Mouse Pad"
+  total_amount: 20
+  created_at: "2023-10-21"
+- id: 22
+  name: Tina Underwood
+  order_number: 1022
+  status: Shipped
+  items: "USB Hub"
+  total_amount: 45
+  created_at: "2023-10-22"
+- id: 23
+  name: Victor Wallace
+  order_number: 1023
+  status: In Transit
+  items: "Docking Station"
+  total_amount: 200
+  created_at: "2023-10-23"
+- id: 24
+  name: Wendy Xavier
+  order_number: 1024
+  status: Not Shipped
+  items: "Laptop Bag"
+  total_amount: 80
+  created_at: "2023-10-24"
+- id: 25
+  name: Xavier Young
+  order_number: 1025
+  status: Shipped
+  items: "Stylus Pen"
+  total_amount: 120
+  created_at: "2023-10-25"
+- id: 26
+  name: Yvonne Zhang
+  order_number: 1026
+  status: In Transit
+  items: "Memory Card"
+  total_amount: 65
+  created_at: "2023-10-26"
+- id: 27
+  name: Zachary Adams
+  order_number: 1027
+  status: Not Shipped
+  items: "Hard Drive Enclosure"
+  total_amount: 95
+  created_at: "2023-10-27"
+- id: 28
+  name: Anna Bell
+  order_number: 1028
+  status: Shipped
+  items: "Bluetooth Speaker"
+  total_amount: 110
+  created_at: "2023-10-28"
+- id: 29
+  name: Brian Clark
+  order_number: 1029
+  status: In Transit
+  items: "Smartphone"
+  total_amount: 800
+  created_at: "2023-10-29"
+- id: 30
+  name: Cassandra Dean
+  order_number: 1030
+  status: Not Shipped
+  items: "Tablet Case"
+  total_amount: 45
+  created_at: "2023-10-30"
+- id: 31
+  name: David Ellis
+  order_number: 1031
+  status: Shipped
+  items: "Phone Charger"
+  total_amount: 30
+  created_at: "2023-10-31"
+- id: 32
+  name: Emily Foster
+  order_number: 1032
+  status: In Transit
+  items: "Wireless Earbuds"
+  total_amount: 150
+  created_at: "2023-11-01"
+- id: 33
+  name: Frank Green
+  order_number: 1033
+  status: Not Shipped
+  items: "Smartwatch"
+  total_amount: 250
+  created_at: "2023-11-02"
