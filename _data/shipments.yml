@@ -47,3 +47,114 @@
   total_weight: 150
   created_at: 2024-06-02 11:45
   shipped_date: 2024-06-02
+
+# 新增的10个运单记录
+- tracking_number: YD20240601006
+  status: Not Shipped
+  client_code: C004
+  transport_mode: Air
+  destination: Chengdu
+  items_count: 7
+  total_weight: 80
+  created_at: 2024-06-03 09:00
+  shipped_date: 
+
+- tracking_number: YD20240601007
+  status: In Transit
+  client_code: C005
+  transport_mode: Road
+  destination: Wuhan
+  items_count: 4
+  total_weight: 50
+  created_at: 2024-06-03 10:30
+  shipped_date: 2024-06-03
+
+- tracking_number: YD20240601008
+  status: Arrived
+  client_code: C006
+  transport_mode: Rail
+  destination: Changsha
+  items_count: 3
+  total_weight: 20
+  created_at: 2024-06-02 14:00
+  shipped_date: 2024-06-02
+
+- tracking_number: YD20240601009
+  status: Not Shipped
+  client_code: C007
+  transport_mode: Air
+  destination: Nanning
+  items_count: 6
+  total_weight: 70
+  created_at: 2024-06-04 08:45
+  shipped_date: 
+
+- tracking_number: YD20240601010
+  status: In Transit
+  client_code: C008
+  transport_mode: Road
+  destination: Kunming
+  items_count: 9
+  total_weight: 100
+  created_at: 2024-06-04 11:15
+  shipped_date: 2024-06-04
+
+- tracking_number: YD20240601011
+  status: Arrived
+  client_code: C009
+  transport_mode: Rail
+  destination: Hefei
+  items_count: 5
+  total_weight: 60
+  created_at: 2024-06-03 16:00
+  shipped_date: 2024-06-03
+
+- tracking_number: YD20240601012
+  status: Not Shipped
+  client_code: C010
+  transport_mode: Air
+  destination: Fuzhou
+  items_count: 8
+  total_weight: 90
+  created_at: 2024-06-05 09:30
+  shipped_date: 
+
+- tracking_number: YD20240601013
+  status: In Transit
+  client_code: C011
+  transport_mode: Road
+  destination: Xiamen
+  items_count: 3
+  total_weight: 40
+  created_at: 2024-06-05 10:00
+  shipped_date: 2024-06-05
+
+- tracking_number: YD20240601014
+  status: Arrived
+  client_code: C012
+  transport_mode: Rail
+  destination: Qingdao
+  items_count: 4
+  total_weight: 50
+  created_at: 2024-06-04 15:20
+  shipped_date: 2024-06-04
+
+- tracking_number: YD20240601015
+  status: Not Shipped
+  client_code: C013
+  transport_mode: Air
+  destination: Shenyang
+  items_count: 10
+  total_weight: 120
+  created_at: 2024-06-06 08:10
+  shipped_date: 
+
+- tracking_number: YD20240601016
+  status: In Transit
+  client_code: C014
+  transport_mode: Road
+  destination: Harbin
+  items_count: 12
+  total_weight: 150
+  created_at: 2024-06-06 11:45
+  shipped_date: 2024-06-06

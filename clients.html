@@ -1,0 +1,56 @@
+---
+layout: default
+title: Client Order List
+---
+
+<link rel="stylesheet" href="assets/css/client_style.css">
+
+<div class="header">
+    <h1>Client Order List</h1>
+</div>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Order Number</th>
+                <th>Client Name</th>
+                <th>Status</th>
+                <th>Items</th>
+                <th>Total Amount</th>
+                <th>Created Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for client in site.data.client %}
+            <tr>
+                <td>{{ client.order_number }}</td>
+                <td>{{ client.name }}</td>
+                <td><span class="status-badge" data-status="{{ client.status }}">{{ client.status }}</span></td>
+                <td>{{ client.items }}</td>
+                <td>${{ client.total_amount }}</td>
+                <td>{{ client.created_at }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<script>
+    // Status badge color logic
+    const statusBadges = document.querySelectorAll('.status-badge');
+    statusBadges.forEach(badge => {
+        const status = badge.getAttribute('data-status');
+        switch (status) {
+            case 'Shipped':
+                badge.style.backgroundColor = '#4CAF50';
+                break;
+            case 'In Transit':
+                badge.style.backgroundColor = '#FFC107';
+                break;
+            case 'Not Shipped':
+                badge.style.backgroundColor = '#F44336';
+                break;
+        }
+    });
+</script>

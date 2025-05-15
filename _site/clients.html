@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Waybill Management System - Waybill Management System</title>
+    <title>Client Order List - Waybill Management System</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap"
@@ -123,238 +123,321 @@
     </nav>
 
     <main class="container my-4">
-        <link rel="stylesheet" href="assets/css/index_style.css">
+        <link rel="stylesheet" href="assets/css/client_style.css">
 
 <div class="header">
-    <h1>Waybill Management System</h1>
-    <div class="desc">Table Style · Efficient · Modern Logistics Waybill Management</div>
-    <div class="stats">
-        <div class="stat">
-            <div class="num">16</div>
-            <div class="label">Total Waybills</div>
-        </div>
-        <div class="stat">
-            <div class="num">6</div>
-            <div class="label">Not Shipped</div>
-        </div>
-        <div class="stat">
-            <div class="num">6</div>
-            <div class="label">In Transit</div>
-        </div>
-        <div class="stat">
-            <div class="num">4</div>
-            <div class="label">Arrived</div>
-        </div>
-    </div>
+    <h1>Client Order List</h1>
 </div>
 
 <div class="table-container">
     <table>
         <thead>
             <tr>
-                <th>Waybill Number</th>
+                <th>Order Number</th>
+                <th>Client Name</th>
                 <th>Status</th>
-                <th>Client Code</th>
-                <th>Transport Mode</th>
-                <th>Destination</th>
                 <th>Items</th>
+                <th>Total Amount</th>
                 <th>Created Date</th>
-                <th>Shipped Date</th>
             </tr>
         </thead>
         <tbody>
             
+            <tr>
+                <td>1001</td>
+                <td>John Doe</td>
+                <td><span class="status-badge" data-status="Shipped">Shipped</span></td>
+                <td>Laptop, Mouse</td>
+                <td>$1200</td>
+                <td>2023-10-01</td>
+            </tr>
             
             <tr>
-                <td>YD20240601016</td>
+                <td>1002</td>
+                <td>Jane Smith</td>
                 <td><span class="status-badge" data-status="In Transit">In Transit</span></td>
-                <td>C014</td>
-                <td>Road</td>
-                <td>Harbin</td>
-                <td>12 pcs/150 kg</td>
-                <td>2024-06-06</td>
-                <td>2024-06-06
-                </td>
+                <td>Keyboard, Monitor</td>
+                <td>$850</td>
+                <td>2023-10-02</td>
             </tr>
             
             <tr>
-                <td>YD20240601015</td>
+                <td>1003</td>
+                <td>Alice Johnson</td>
                 <td><span class="status-badge" data-status="Not Shipped">Not Shipped</span></td>
-                <td>C013</td>
-                <td>Air</td>
-                <td>Shenyang</td>
-                <td>10 pcs/120 kg</td>
-                <td>2024-06-06</td>
-                <td>-
-                </td>
+                <td>Headphones, Speaker</td>
+                <td>$300</td>
+                <td>2023-10-03</td>
             </tr>
             
             <tr>
-                <td>YD20240601013</td>
+                <td>1004</td>
+                <td>Bob Brown</td>
+                <td><span class="status-badge" data-status="Shipped">Shipped</span></td>
+                <td>Tablet, Charger</td>
+                <td>$600</td>
+                <td>2023-10-04</td>
+            </tr>
+            
+            <tr>
+                <td>1005</td>
+                <td>Charlie Davis</td>
                 <td><span class="status-badge" data-status="In Transit">In Transit</span></td>
-                <td>C011</td>
-                <td>Road</td>
-                <td>Xiamen</td>
-                <td>3 pcs/40 kg</td>
-                <td>2024-06-05</td>
-                <td>2024-06-05
-                </td>
+                <td>Webcam</td>
+                <td>$150</td>
+                <td>2023-10-05</td>
             </tr>
             
             <tr>
-                <td>YD20240601012</td>
+                <td>1006</td>
+                <td>Diana Evans</td>
                 <td><span class="status-badge" data-status="Not Shipped">Not Shipped</span></td>
-                <td>C010</td>
-                <td>Air</td>
-                <td>Fuzhou</td>
-                <td>8 pcs/90 kg</td>
-                <td>2024-06-05</td>
-                <td>-
-                </td>
+                <td>Printer</td>
+                <td>$400</td>
+                <td>2023-10-06</td>
             </tr>
             
             <tr>
-                <td>YD20240601014</td>
-                <td><span class="status-badge" data-status="Arrived">Arrived</span></td>
-                <td>C012</td>
-                <td>Rail</td>
-                <td>Qingdao</td>
-                <td>4 pcs/50 kg</td>
-                <td>2024-06-04</td>
-                <td>2024-06-04
-                </td>
+                <td>1007</td>
+                <td>Ethan Foster</td>
+                <td><span class="status-badge" data-status="Shipped">Shipped</span></td>
+                <td>Router</td>
+                <td>$250</td>
+                <td>2023-10-07</td>
             </tr>
             
             <tr>
-                <td>YD20240601010</td>
+                <td>1008</td>
+                <td>Fiona Grant</td>
                 <td><span class="status-badge" data-status="In Transit">In Transit</span></td>
-                <td>C008</td>
-                <td>Road</td>
-                <td>Kunming</td>
-                <td>9 pcs/100 kg</td>
-                <td>2024-06-04</td>
-                <td>2024-06-04
-                </td>
+                <td>Scanner</td>
+                <td>$350</td>
+                <td>2023-10-08</td>
             </tr>
             
             <tr>
-                <td>YD20240601009</td>
+                <td>1009</td>
+                <td>George Hall</td>
                 <td><span class="status-badge" data-status="Not Shipped">Not Shipped</span></td>
-                <td>C007</td>
-                <td>Air</td>
-                <td>Nanning</td>
-                <td>6 pcs/70 kg</td>
-                <td>2024-06-04</td>
-                <td>-
-                </td>
+                <td>Projector</td>
+                <td>$900</td>
+                <td>2023-10-09</td>
             </tr>
             
             <tr>
-                <td>YD20240601011</td>
-                <td><span class="status-badge" data-status="Arrived">Arrived</span></td>
-                <td>C009</td>
-                <td>Rail</td>
-                <td>Hefei</td>
-                <td>5 pcs/60 kg</td>
-                <td>2024-06-03</td>
-                <td>2024-06-03
-                </td>
+                <td>1010</td>
+                <td>Hannah Ingram</td>
+                <td><span class="status-badge" data-status="Shipped">Shipped</span></td>
+                <td>External HDD</td>
+                <td>$120</td>
+                <td>2023-10-10</td>
             </tr>
             
             <tr>
-                <td>YD20240601007</td>
+                <td>1011</td>
+                <td>Ian Jenkins</td>
                 <td><span class="status-badge" data-status="In Transit">In Transit</span></td>
-                <td>C005</td>
-                <td>Road</td>
-                <td>Wuhan</td>
-                <td>4 pcs/50 kg</td>
-                <td>2024-06-03</td>
-                <td>2024-06-03
-                </td>
+                <td>UPS</td>
+                <td>$300</td>
+                <td>2023-10-11</td>
             </tr>
             
             <tr>
-                <td>YD20240601006</td>
+                <td>1012</td>
+                <td>Julia Kelly</td>
                 <td><span class="status-badge" data-status="Not Shipped">Not Shipped</span></td>
-                <td>C004</td>
-                <td>Air</td>
-                <td>Chengdu</td>
-                <td>7 pcs/80 kg</td>
-                <td>2024-06-03</td>
-                <td>-
-                </td>
+                <td>SSD</td>
+                <td>$180</td>
+                <td>2023-10-12</td>
             </tr>
             
             <tr>
-                <td>YD20240601008</td>
-                <td><span class="status-badge" data-status="Arrived">Arrived</span></td>
-                <td>C006</td>
-                <td>Rail</td>
-                <td>Changsha</td>
-                <td>3 pcs/20 kg</td>
-                <td>2024-06-02</td>
-                <td>2024-06-02
-                </td>
+                <td>1013</td>
+                <td>Kevin Lee</td>
+                <td><span class="status-badge" data-status="Shipped">Shipped</span></td>
+                <td>RAM Kit</td>
+                <td>$220</td>
+                <td>2023-10-13</td>
             </tr>
             
             <tr>
-                <td>YD20240601005</td>
+                <td>1014</td>
+                <td>Laura Miller</td>
                 <td><span class="status-badge" data-status="In Transit">In Transit</span></td>
-                <td>C001</td>
-                <td>Rail</td>
-                <td>Hangzhou</td>
-                <td>12 pcs/150 kg</td>
-                <td>2024-06-02</td>
-                <td>2024-06-02
-                </td>
+                <td>Graphics Card</td>
+                <td>$800</td>
+                <td>2023-10-14</td>
             </tr>
             
             <tr>
-                <td>YD20240601004</td>
+                <td>1015</td>
+                <td>Mike Nelson</td>
                 <td><span class="status-badge" data-status="Not Shipped">Not Shipped</span></td>
-                <td>C002</td>
-                <td>Road</td>
-                <td>Shenzhen</td>
-                <td>8 pcs/90 kg</td>
-                <td>2024-06-02</td>
-                <td>-
-                </td>
+                <td>CPU</td>
+                <td>$500</td>
+                <td>2023-10-15</td>
             </tr>
             
             <tr>
-                <td>YD20240601002</td>
+                <td>1016</td>
+                <td>Nancy Owens</td>
+                <td><span class="status-badge" data-status="Shipped">Shipped</span></td>
+                <td>Motherboard</td>
+                <td>$450</td>
+                <td>2023-10-16</td>
+            </tr>
+            
+            <tr>
+                <td>1017</td>
+                <td>Oliver Price</td>
                 <td><span class="status-badge" data-status="In Transit">In Transit</span></td>
-                <td>C002</td>
-                <td>Rail</td>
-                <td>Shanghai</td>
-                <td>5 pcs/60 kg</td>
-                <td>2024-06-01</td>
-                <td>2024-06-01
-                </td>
+                <td>Cooling Fan</td>
+                <td>$90</td>
+                <td>2023-10-17</td>
             </tr>
             
             <tr>
-                <td>YD20240601001</td>
+                <td>1018</td>
+                <td>Patricia Quinn</td>
                 <td><span class="status-badge" data-status="Not Shipped">Not Shipped</span></td>
-                <td>C001</td>
-                <td>Road</td>
-                <td>Beijing</td>
-                <td>10 pcs/120 kg</td>
-                <td>2024-06-01</td>
-                <td>-
-                </td>
+                <td>Power Supply</td>
+                <td>$150</td>
+                <td>2023-10-18</td>
             </tr>
             
             <tr>
-                <td>YD20240601003</td>
-                <td><span class="status-badge" data-status="Arrived">Arrived</span></td>
-                <td>C003</td>
-                <td>Air</td>
-                <td>Guangzhou</td>
-                <td>2 pcs/15 kg</td>
-                <td>2024-05-31</td>
-                <td>2024-05-31
-                </td>
+                <td>1019</td>
+                <td>Quincy Reed</td>
+                <td><span class="status-badge" data-status="Shipped">Shipped</span></td>
+                <td>Monitor Stand</td>
+                <td>$75</td>
+                <td>2023-10-19</td>
+            </tr>
+            
+            <tr>
+                <td>1020</td>
+                <td>Rachel Simmons</td>
+                <td><span class="status-badge" data-status="In Transit">In Transit</span></td>
+                <td>Cable Set</td>
+                <td>$60</td>
+                <td>2023-10-20</td>
+            </tr>
+            
+            <tr>
+                <td>1021</td>
+                <td>Steve Turner</td>
+                <td><span class="status-badge" data-status="Not Shipped">Not Shipped</span></td>
+                <td>Mouse Pad</td>
+                <td>$20</td>
+                <td>2023-10-21</td>
+            </tr>
+            
+            <tr>
+                <td>1022</td>
+                <td>Tina Underwood</td>
+                <td><span class="status-badge" data-status="Shipped">Shipped</span></td>
+                <td>USB Hub</td>
+                <td>$45</td>
+                <td>2023-10-22</td>
+            </tr>
+            
+            <tr>
+                <td>1023</td>
+                <td>Victor Wallace</td>
+                <td><span class="status-badge" data-status="In Transit">In Transit</span></td>
+                <td>Docking Station</td>
+                <td>$200</td>
+                <td>2023-10-23</td>
+            </tr>
+            
+            <tr>
+                <td>1024</td>
+                <td>Wendy Xavier</td>
+                <td><span class="status-badge" data-status="Not Shipped">Not Shipped</span></td>
+                <td>Laptop Bag</td>
+                <td>$80</td>
+                <td>2023-10-24</td>
+            </tr>
+            
+            <tr>
+                <td>1025</td>
+                <td>Xavier Young</td>
+                <td><span class="status-badge" data-status="Shipped">Shipped</span></td>
+                <td>Stylus Pen</td>
+                <td>$120</td>
+                <td>2023-10-25</td>
+            </tr>
+            
+            <tr>
+                <td>1026</td>
+                <td>Yvonne Zhang</td>
+                <td><span class="status-badge" data-status="In Transit">In Transit</span></td>
+                <td>Memory Card</td>
+                <td>$65</td>
+                <td>2023-10-26</td>
+            </tr>
+            
+            <tr>
+                <td>1027</td>
+                <td>Zachary Adams</td>
+                <td><span class="status-badge" data-status="Not Shipped">Not Shipped</span></td>
+                <td>Hard Drive Enclosure</td>
+                <td>$95</td>
+                <td>2023-10-27</td>
+            </tr>
+            
+            <tr>
+                <td>1028</td>
+                <td>Anna Bell</td>
+                <td><span class="status-badge" data-status="Shipped">Shipped</span></td>
+                <td>Bluetooth Speaker</td>
+                <td>$110</td>
+                <td>2023-10-28</td>
+            </tr>
+            
+            <tr>
+                <td>1029</td>
+                <td>Brian Clark</td>
+                <td><span class="status-badge" data-status="In Transit">In Transit</span></td>
+                <td>Smartphone</td>
+                <td>$800</td>
+                <td>2023-10-29</td>
+            </tr>
+            
+            <tr>
+                <td>1030</td>
+                <td>Cassandra Dean</td>
+                <td><span class="status-badge" data-status="Not Shipped">Not Shipped</span></td>
+                <td>Tablet Case</td>
+                <td>$45</td>
+                <td>2023-10-30</td>
+            </tr>
+            
+            <tr>
+                <td>1031</td>
+                <td>David Ellis</td>
+                <td><span class="status-badge" data-status="Shipped">Shipped</span></td>
+                <td>Phone Charger</td>
+                <td>$30</td>
+                <td>2023-10-31</td>
+            </tr>
+            
+            <tr>
+                <td>1032</td>
+                <td>Emily Foster</td>
+                <td><span class="status-badge" data-status="In Transit">In Transit</span></td>
+                <td>Wireless Earbuds</td>
+                <td>$150</td>
+                <td>2023-11-01</td>
+            </tr>
+            
+            <tr>
+                <td>1033</td>
+                <td>Frank Green</td>
+                <td><span class="status-badge" data-status="Not Shipped">Not Shipped</span></td>
+                <td>Smartwatch</td>
+                <td>$250</td>
+                <td>2023-11-02</td>
             </tr>
             
         </tbody>
@@ -362,13 +445,22 @@
 </div>
 
 <script>
-    // User menu dropdown logic
-    const avatar = document.getElementById('userAvatar');
-    const dropdown = document.getElementById('userDropdown');
-    avatar.addEventListener('mouseenter', () => { dropdown.style.display = 'block'; });
-    avatar.addEventListener('mouseleave', () => { setTimeout(() => { if (!dropdown.matches(':hover')) dropdown.style.display = 'none'; }, 200); });
-    dropdown.addEventListener('mouseleave', () => { dropdown.style.display = 'none'; });
-    dropdown.addEventListener('mouseenter', () => { dropdown.style.display = 'block'; });
+    // Status badge color logic
+    const statusBadges = document.querySelectorAll('.status-badge');
+    statusBadges.forEach(badge => {
+        const status = badge.getAttribute('data-status');
+        switch (status) {
+            case 'Shipped':
+                badge.style.backgroundColor = '#4CAF50';
+                break;
+            case 'In Transit':
+                badge.style.backgroundColor = '#FFC107';
+                break;
+            case 'Not Shipped':
+                badge.style.backgroundColor = '#F44336';
+                break;
+        }
+    });
 </script>
     </main>
 
